@@ -1,0 +1,106 @@
+/* services page started */
+#services::before {
+    content: "";
+    background: url("../image/Beautiful-Beach-Side-View.jpg");
+    position: absolute;
+    height: 70vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-attachment: fixed;
+    background-blend-mode: hue;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+#services{
+    height: 70vh;
+}
+
+ .features {
+    background: #f9f9f9;
+}
+.section-wrapper {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.section-title {
+    color: #313131;
+    text-align: center;
+}
+.section-subtitle {
+    color: #583b54;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.custom-table {
+    /* margin-right: -15px; */
+ display: flex;
+ width: 80vw;
+ /* margin-left:10vw; */
+ 
+    /* margin-left:10vw; */
+}
+
+.custom-table {
+    display: table;
+}
+ 
+
+
+.grid-50 {
+    width: 50%;
+    padding: 15px 31px;
+    margin: 15px;
+    position: relative;
+     height: auto;
+} 
+.grid-50 .features-details{
+    margin-bottom: 12px;
+}
+.grid-50 .features-list{
+    list-style-type: circle;
+}
+.grid-50 .features-list li{
+    margin-bottom: 12px;
+    padding-top: 12px;
+}
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.features .custom-button {
+    display: inline;
+}
+
+.custom-button:hover {
+    background: #53B1DE;
+    border-color: #53B1DE;
+    color: #fff;
+} 
+
+
+
+.additional-photo-gallery-container{
+    margin: 20px 0px;
+}
+.additional-photo-gallery-container .gallery-handler{
+    display: flex;
+}
+
+
+.additional-photo-gallery-container .gallery-handler .addtional-photo-gallery{
+    display: flex;
+    width: 388px;
+}
+.additional-photo-gallery-container .gallery-handler .addtional-photo-gallery .text{
+    padding: 12px 12px;
+}
+
+/* services page ended */
+
