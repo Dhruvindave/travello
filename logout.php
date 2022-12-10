@@ -3,6 +3,6 @@
     session_start();
     session_unset();
     session_destroy();
-    echo "done";
+    // echo "logout";
     header("location:index.php");
 ?>

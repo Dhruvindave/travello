@@ -301,6 +301,7 @@ button, input {
 .about-us p {
     text-align: justify;
     font-size: smaller;
+    /* display: none; */
 }
 
 /* about content started */
@@ -311,6 +312,7 @@ button, input {
     margin: 40px 200px;
 
 }
+
 
 .about-us .about-content .tile1 {
 

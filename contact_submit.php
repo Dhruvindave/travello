@@ -1,9 +1,20 @@
-<?php
- session_start();
- 
- 
-?>
 
+<?php 
+    include 'db_connect.php';
+   
+    $fname = $_POST['fname'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $topic = $_POST['topic'];
+
+    $sql="insert into form(fname,email,subject,topic) values('$fname','$email','$subject','$topic')";
+
+    $result=mysqli_query($conn , $sql);
+    if($result){
+        echo    1;
+    }
+
+?>
 
 
 
@@ -40,7 +51,10 @@
             <!-- ---------------------------navigation started---------==----------------- -->
             <?php require 'partial\partial.php';?>
             <!-- ---------------------------Booking box Started---------==----------------- -->
-
+<?php echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>your form has submitted successfully</strong> thank you for contacting us response would be in few seconds.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>';?>
 
             <!-- ---------------------------Booking box Ended---------==----------------- -->
             <!-- ---------------------------navigation ended---------==----------------- -->
@@ -53,21 +67,23 @@
                         <div class="contact_content">
                             <div class="contact_title">Get in touch with us</div>
                             <div class="contact_text">
-                                <p>Thank you for having interest in our services.please fill out the form or email us <a href="mailto:travello@mail.com">travello@mail.com</a>and we will get back to you promptly regarding your request</p>
+                                <p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo.
+                                    Vivamus massa.Tempor massa et laoreet. Pellentesque sit amet elementum ccumsan sit
+                                    amet mattis eget, tristique at leo. Vivamus massa.</p>
                             </div>
                             <div class="contact_list">
                                 <ul>
                                     <li>
                                         <div>address:</div>
-                                        <div>travello headqureters at rajkot 360005</div>
+                                        <div>1481 Creekside Lane Avila Beach, CA 931</div>
                                     </li>
                                     <li>
                                         <div>phone:</div>
-                                        <div>+919979568684</div>
+                                        <div>+53 345 7953 32453</div>
                                     </li>
                                     <li>
                                         <div>email:</div>
-                                        <div>travello@mail.com</div>
+                                        <div>yourmail@gmail.com</div>
                                     </li>
                                 </ul>
                             </div>
@@ -125,3 +141,7 @@
 </body>
 
 </html>
+
+
+
+

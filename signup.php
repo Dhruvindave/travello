@@ -10,6 +10,19 @@
   <link rel="stylesheet" href="css\style.css">
   <!-- <link rel="stylesheet" href="css\main.css"> -->
   <title>Sign in & Sign up Form</title>
+  <style>
+    .invalid{
+      color: red;
+    }
+    #message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+  </style>
 </head>
 
 <body>
@@ -21,7 +34,7 @@
           <h2 class="title">Sign in</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" name="username" placeholder="Username">
+            <input type="text" name="username" placeholder="Username" id="uname">
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
@@ -53,7 +66,7 @@
           <div class="input-field">
             <i class="fas fa-user"></i>
             <input type="text" name="uname" placeholder="uname" id="uname">
-
+           
           </div>
           <div class="input-field">
             <i class="fas fa-email"></i>
@@ -61,15 +74,15 @@
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" name="password" placeholder="password" id="pass">
-
+            <input type="password" id="pass" name="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+           
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
             <input type="password" name="cpassword" placeholder="cpassword" id="confirm_pass">
 
           </div>
-          <span id="wrong_pass_alert"></span>
+          <!-- <span id="message"><p class="invalid" id="wrong_pass_alert">password must contain 8 char</p></span> -->
 
           <input type="submit" class="btn" id="create" value="Sign up" />
           <p class="social-text">Or Sign up with social platforms</p>
@@ -119,8 +132,15 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
 
+  <script src="app.js"></script>
+    <!-- <script>
+      var pass = document.getElementById("pass");
+      var wrong_pass = document.getElementById("wrong_pass_alert");
+      pass.onfoucs = function () {
+        document.getElementById("message").style.display= "block";
+      }
+    </script> -->
 </body>
 
 </html>
